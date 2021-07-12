@@ -61,5 +61,5 @@ class Effect extends Card {
 
 
         RedBeltNinja.attack(BlackBeltNinja);
-				BlackBeltNinja.attack(RedBeltNinja);
+		BlackBeltNinja.attack(RedBeltNinja);
             
