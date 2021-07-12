@@ -13,7 +13,7 @@ class Unit extends Card{
     }
     attack(target){
         this.res-=target.power;
-        console.log(`ouch i got dmg ${this.power}`)
+        console.log(`ouch i got dmg ${this.res}`)
     }
 }
 
@@ -28,12 +28,9 @@ class Effect extends Card {
     play(target) {
         if (target instanceof Unit) {
             if (this.stat == "resilience") {
-                if (this.name == "Hard Algorithm") {
                     target.res += this.magnitude;
-                } else if (this.name == "Unhandled Promise Rejection") {
-                    target.res -= this.magnitude;
-                }
-            } else if (this.stat == "power") {
+                } 
+             else if (this.stat == "power") {
                 target.power += this.magnitude;
             }
         } else {
@@ -49,10 +46,10 @@ class Effect extends Card {
         effectCard1.play(RedBeltNinja);
 
 
-        const BlackBeltNinja = new Unit("Black Belt Ninja", 4, 10, 4);
+        const BlackBeltNinja = new Unit("Black Belt Ninja", 4, 5, 4);
 
 
-        const effectCard2 = new Effect("Unhandled Promise Rejection", 1, "reduce target's resilience by 2", "resilience", 2);
+        const effectCard2 = new Effect("Unhandled Promise Rejection", 1, "reduce target's resilience by 2", "resilience", -2);
         effectCard2.play(RedBeltNinja);
 
 
@@ -61,5 +58,5 @@ class Effect extends Card {
 
 
         RedBeltNinja.attack(BlackBeltNinja);
-		BlackBeltNinja.attack(RedBeltNinja);
+        BlackBeltNinja.attack(RedBeltNinja);
             

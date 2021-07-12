@@ -1,4 +1,3 @@
-// parent Ninja class
 class Ninja {
     constructor(name,health) {
         this.name = name;
@@ -12,10 +11,10 @@ class Ninja {
     }
 
    showStats(){	
-console.log(`${this.name} `);
-console.log(`${ this.health} `);
-console.log(`${ this.speed } `);
-console.log(`${ this.strength } `); 
+	console.log(`${this.name} `);
+	console.log(`${ this.health} `);
+	console.log(`${ this.speed } `);
+	console.log(`${ this.strength } `); 
 	
 }
 drinkSake(){
