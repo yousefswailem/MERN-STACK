@@ -46,9 +46,9 @@ const UserForm = (props) => {
     };
 
     const errorconpass = () => {
-        if( props.inputs.confirmpassword !== props.inputs.password){
+        if(   props.inputs.confirmpassword !== props.inputs.password   &&   props.inputs.confirmpassword.length !== 0){
 	    return "confirm password should match with password";
-	}
+    }  
     };
 
 
@@ -56,27 +56,29 @@ const UserForm = (props) => {
         if(  props.inputs.password.length < 8){
         return false;
     }
+
     else if (props.inputs.confirmpassword !== props.inputs.password){
         return false;
     }
+
     else if (props.inputs.email.length < 2){
         return false;
     }
+
     else if (props.inputs.lastname.length < 2){
         return false;
     }
+
     else if (props.inputs.firstname.length < 2){
         return false;
     }
+    
     else{
         return <input type="submit" onChange={buttonhide} value="Create User" />;
     }
         
 	};
-    
-
-
-
+   
         const setinputs = (e) =>{
         props.setInputs({
         ...props.inputs,
@@ -84,10 +86,12 @@ const UserForm = (props) => {
         
         });
         }
+
+        
     return (
         <form onSubmit={ createUser }>
             <h3 style={{color:"green"}}>{ formMessage() }</h3>
-                <div>
+        <div>
             <label style={{color:"purple"}}>Firstname</label>
             <p style={{color:"red"}}> {errorfirst()}</p>
             <input type="text" onChange={ setinputs } name="firstname"/>
@@ -117,7 +121,8 @@ const UserForm = (props) => {
             <input type="password" onChange={setinputs} name= "confirmpassword" />
         </div>
         <br/>
-        {buttonhide()}
+        <p>Fill the Form To Show The Button</p>
+        <p>{buttonhide()}</p>
         </form>
         
         
