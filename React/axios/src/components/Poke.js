@@ -15,11 +15,11 @@ const Pokis = (props) => {
     return (
         <>
         <button onClick= { () => useeffect()} > Click me </button>
-        <div>
+        <ol>
         { Poki.map((Poki, index) => {
-                return (<div key={index}>{Poki.name}</div>)
+                return (<li  key={index} > { Poki.name }</li>)
             })}
-        </div>
+        </ol>
     </>
     )
 }
