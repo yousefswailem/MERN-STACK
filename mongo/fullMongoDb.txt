@@ -1,0 +1,1973 @@
+Microsoft Windows [Version 10.0.19043.1083]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1\bin>mongo.exe
+MongoDB shell version v5.0.1
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: No connection could be made because the target machine actively refused it. :
+connect@src/mongo/shell/mongo.js:372:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1\bin>./mongo
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1\bin>./mongo.exe
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1\bin>./mongo.exe
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1\bin>.\mongo.exe
+MongoDB shell version v5.0.1
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: No connection could be made because the target machine actively refused it. :
+connect@src/mongo/shell/mongo.js:372:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1\bin>cd ..
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1>cd.
+
+C:\Users\hamad\Desktop\MERNstack\mongo\mongodb-win32-x86_64-windows-5.0.1>cd..
+
+C:\Users\hamad\Desktop\MERNstack\mongo>md \data\db
+
+C:\Users\hamad\Desktop\MERNstack\mongo>md \data\db
+A subdirectory or file \data\db already exists.
+
+C:\Users\hamad\Desktop\MERNstack\mongo>cd..
+
+C:\Users\hamad\Desktop\MERNstack>mk mongo
+'mk' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\hamad\Desktop\MERNstack>md mongo
+
+C:\Users\hamad\Desktop\MERNstack>cd c:/"Program Files"/MongoDB/Server/5.0.1/bin/
+The system cannot find the path specified.
+
+C:\Users\hamad\Desktop\MERNstack>cd c:/Program Files/MongoDB/Server/5.0.1/bin/
+The system cannot find the path specified.
+
+C:\Users\hamad\Desktop\MERNstack>cd c:/Program Files
+
+c:\Program Files>cd c:/Program Files/MongoDB/Server/5.0.1/bin/
+The system cannot find the path specified.
+
+c:\Program Files>cd c:/ProgramFiles/MongoDB/Server/5.0.1/bin/
+The system cannot find the path specified.
+
+c:\Program Files>cd c:/Program Files/MongoDB/Server/5.0/bin/
+
+c:\Program Files\MongoDB\Server\5.0\bin>mongo.exe
+MongoDB shell version v5.0.1
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("d3a45610-5fe9-4638-afe2-bef99902464f") }
+MongoDB server version: 5.0.1
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+        https://community.mongodb.com
+---
+The server generated these startup warnings when booting:
+        2021-07-27T21:40:55.490+03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use my_first_db
+switched to db my_first_db
+> db.createCollection("students")
+{ "ok" : 1 }
+> db.my_first_db.insert({name:yousef,home_state:palestine,lucky_number:7,birthday{month:7,day:20,year:2002}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:79
+> db.students.insert({name:yousef,home_state:palestine,lucky_number:7,birthday{month:7,day:20,year:2002}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:76
+> db.students.insert({name:yousef,home_state:palestine,lucky_number:7,birthday:{month:7,day:20,year:2002}})
+uncaught exception: ReferenceError: yousef is not defined :
+@(shell):1:21
+> db.students.insert({name:"yousef",home_state:"palestine",lucky_number:7,birthday:{month:7,day:20,year:2002}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"ahmad",home_state:"jordan",lucky_number:20,birthday:{month:5,day:10,year:2001}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"mohammad",home_state:"aljeria",lucky_number:2,birthday:{month:5,day:1,year:2000}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"khalil",home_state:"jordan",lucky_number:10,birthday:{month:12,day:5,year:1999}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"majd",home_state:"palestine",lucky_number:40,birthday:{month:2,day:9,year:1989}})
+WriteResult({ "nInserted" : 1 })
+> db.students.find()
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 } }
+{ "_id" : ObjectId("61006a21da64def303954472"), "name" : "ahmad", "home_state" : "jordan", "lucky_number" : 20, "birthday" : { "month" : 5, "day" : 10, "year" : 2001 } }
+{ "_id" : ObjectId("61006a4fda64def303954473"), "name" : "mohammad", "home_state" : "aljeria", "lucky_number" : 2, "birthday" : { "month" : 5, "day" : 1, "year" : 2000 } }
+{ "_id" : ObjectId("61006a68da64def303954474"), "name" : "khalil", "home_state" : "jordan", "lucky_number" : 10, "birthday" : { "month" : 12, "day" : 5, "year" : 1999 } }
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 } }
+> db.students.find({home_state:"jordan"})
+{ "_id" : ObjectId("61006a21da64def303954472"), "name" : "ahmad", "home_state" : "jordan", "lucky_number" : 20, "birthday" : { "month" : 5, "day" : 10, "year" : 2001 } }
+{ "_id" : ObjectId("61006a68da64def303954474"), "name" : "khalil", "home_state" : "jordan", "lucky_number" : 10, "birthday" : { "month" : 12, "day" : 5, "year" : 1999 } }
+> db.students.find(lucky_number:{$gt:3})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:29
+> db.students.find({lucky_number:{$gt:3}})
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 } }
+{ "_id" : ObjectId("61006a21da64def303954472"), "name" : "ahmad", "home_state" : "jordan", "lucky_number" : 20, "birthday" : { "month" : 5, "day" : 10, "year" : 2001 } }
+{ "_id" : ObjectId("61006a68da64def303954474"), "name" : "khalil", "home_state" : "jordan", "lucky_number" : 10, "birthday" : { "month" : 12, "day" : 5, "year" : 1999 } }
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 } }
+> db.students.find({lucky_number:{$lte:3 }})
+{ "_id" : ObjectId("61006a4fda64def303954473"), "name" : "mohammad", "home_state" : "aljeria", "lucky_number" : 2, "birthday" : { "month" : 5, "day" : 1, "year" : 2000 } }
+> db.students.find({lucky_number:{$lt:10 $gt:0 }})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:39
+> db.students.find({lucky_number:{$lt:10 ,$gt:0 }})
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 } }
+{ "_id" : ObjectId("61006a4fda64def303954473"), "name" : "mohammad", "home_state" : "aljeria", "lucky_number" : 2, "birthday" : { "month" : 5, "day" : 1, "year" : 2000 } }
+> db.students.update({$push:{interests:[coding,brunch,MongoDB]}})
+uncaught exception: ReferenceError: coding is not defined :
+@(shell):1:39
+> db.students.update({$push:interests:[coding,brunch,MongoDB]})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:35
+> db.students.update({$push:{interests:[coding,brunch,MongoDB]}})
+uncaught exception: ReferenceError: coding is not defined :
+@(shell):1:39
+> db.students.update({$push:{interests:["coding","brunch","MongoDB"]}})
+uncaught exception: Error: need an update object or pipeline :
+DBCollection.prototype._parseUpdate@src/mongo/shell/collection.js:461:15
+DBCollection.prototype.update@src/mongo/shell/collection.js:510:18
+@(shell):1:1
+> db.students.update({},{$push:{interests:["coding","brunch","MongoDB"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find()
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 }, "interests" : [ [ "coding", "brunch", "MongoDB" ] ] }
+{ "_id" : ObjectId("61006a21da64def303954472"), "name" : "ahmad", "home_state" : "jordan", "lucky_number" : 20, "birthday" : { "month" : 5, "day" : 10, "year" : 2001 } }
+{ "_id" : ObjectId("61006a4fda64def303954473"), "name" : "mohammad", "home_state" : "aljeria", "lucky_number" : 2, "birthday" : { "month" : 5, "day" : 1, "year" : 2000 } }
+{ "_id" : ObjectId("61006a68da64def303954474"), "name" : "khalil", "home_state" : "jordan", "lucky_number" : 10, "birthday" : { "month" : 12, "day" : 5, "year" : 1999 } }
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 } }
+> db.students.updatemany({},{$push:{interests:["coding","brunch","MongoDB"]}})
+uncaught exception: TypeError: db.students.updatemany is not a function :
+@(shell):1:1
+> db.students.updateMany({},{$push:{interests:["coding","brunch","MongoDB"]}})
+{ "acknowledged" : true, "matchedCount" : 5, "modifiedCount" : 5 }
+> db.students.find()
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 }, "interests" : [ [ "coding", "brunch", "MongoDB" ], [ "coding", "brunch", "MongoDB" ] ] }
+{ "_id" : ObjectId("61006a21da64def303954472"), "name" : "ahmad", "home_state" : "jordan", "lucky_number" : 20, "birthday" : { "month" : 5, "day" : 10, "year" : 2001 }, "interests" : [ [ "coding", "brunch", "MongoDB" ] ] }
+{ "_id" : ObjectId("61006a4fda64def303954473"), "name" : "mohammad", "home_state" : "aljeria", "lucky_number" : 2, "birthday" : { "month" : 5, "day" : 1, "year" : 2000 }, "interests" : [ [ "coding", "brunch", "MongoDB" ] ] }
+{ "_id" : ObjectId("61006a68da64def303954474"), "name" : "khalil", "home_state" : "jordan", "lucky_number" : 10, "birthday" : { "month" : 12, "day" : 5, "year" : 1999 }, "interests" : [ [ "coding", "brunch", "MongoDB" ] ] }
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ [ "coding", "brunch", "MongoDB" ] ] }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("610069fdda64def303954471"),
+        "name" : "yousef",
+        "home_state" : "palestine",
+        "lucky_number" : 7,
+        "birthday" : {
+                "month" : 7,
+                "day" : 20,
+                "year" : 2002
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ],
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ]
+}
+{
+        "_id" : ObjectId("61006a21da64def303954472"),
+        "name" : "ahmad",
+        "home_state" : "jordan",
+        "lucky_number" : 20,
+        "birthday" : {
+                "month" : 5,
+                "day" : 10,
+                "year" : 2001
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ]
+}
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ]
+}
+{
+        "_id" : ObjectId("61006a68da64def303954474"),
+        "name" : "khalil",
+        "home_state" : "jordan",
+        "lucky_number" : 10,
+        "birthday" : {
+                "month" : 12,
+                "day" : 5,
+                "year" : 1999
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ]
+}
+{
+        "_id" : ObjectId("61006a89da64def303954475"),
+        "name" : "majd",
+        "home_state" : "palestine",
+        "lucky_number" : 40,
+        "birthday" : {
+                "month" : 2,
+                "day" : 9,
+                "year" : 1989
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ]
+}
+> db.students.update({name:"majd"},{$push:{interests:["hello"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"majd"})
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ [ "coding", "brunch", "MongoDB" ], [ "hello" ] ] }
+> db.students.update({name:"majd"},{$push:interests:["hello"]})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:49
+> db.students.update({name:"majd"},{$set:interests:["hello"]})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:48
+> db.students.update({name:"majd"},{$set:interests:["hello"]}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:48
+> db.students.update({name:"majd"},{$set:{interests:["hello"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"majd"})
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ "hello" ] }
+> db.students.update({name:"majd"},{$addtoset:{interests:["hi"]}})
+WriteResult({
+        "nMatched" : 0,
+        "nUpserted" : 0,
+        "nModified" : 0,
+        "writeError" : {
+                "code" : 9,
+                "errmsg" : "Unknown modifier: $addtoset. Expected a valid update modifier or pipeline-style update specified as an array"
+        }
+})
+> db.students.find({name:"majd"})
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ "hello" ] }
+> db.students.update({name:"majd"},{$addToSet:{interests:["hi"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"majd"})
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ "hello", [ "hi" ] ] }
+> db.students.update({name:"majd"},{$addToSet:{interests:"hola"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"majd"})
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ "hello", [ "hi" ], "hola" ] }
+> db.students.update({name:"majd"},{$addToSet:{interests:"hola"}},true)
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 0 })
+> db.students.find({name:"majd"})
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ "hello", [ "hi" ], "hola" ] }
+> db.students.update({name:"majd"},{$addToSet:{interests:"hola"}},false)
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 0 })
+> db.students.find({name:"majd"})
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ "hello", [ "hi" ], "hola" ] }
+> db.students.update({name:"yousef"},{$addToSet:{interests:"taxes"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"yousef"})
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 }, "interests" : [ [ "coding", "brunch", "MongoDB" ], [ "coding", "brunch", "MongoDB" ], "taxes" ] }
+> db.students.update({name:"yousef"},{$remove:{interests:"taxes"},true})
+uncaught exception: SyntaxError: true is an invalid identifier :
+@(shell):1:64
+> db.students.update({name:"yousef"},{$remove:{interests:"taxes"}},true)
+WriteResult({
+        "nMatched" : 0,
+        "nUpserted" : 0,
+        "nModified" : 0,
+        "writeError" : {
+                "code" : 9,
+                "errmsg" : "Unknown modifier: $remove. Expected a valid update modifier or pipeline-style update specified as an array"
+        }
+})
+> db.students.update({name:"yousef"},{$pull:{interests:"taxes"}},true)
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"yousef"})
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 }, "interests" : [ [ "coding", "brunch", "MongoDB" ], [ "coding", "brunch", "MongoDB" ] ] }
+> db.students.remove({home_state:"jordan"})
+WriteResult({ "nRemoved" : 2 })
+> db.students.remove({name:"ahmad"})
+WriteResult({ "nRemoved" : 0 })
+> db.students.find()
+{ "_id" : ObjectId("610069fdda64def303954471"), "name" : "yousef", "home_state" : "palestine", "lucky_number" : 7, "birthday" : { "month" : 7, "day" : 20, "year" : 2002 }, "interests" : [ [ "coding", "brunch", "MongoDB" ], [ "coding", "brunch", "MongoDB" ] ] }
+{ "_id" : ObjectId("61006a4fda64def303954473"), "name" : "mohammad", "home_state" : "aljeria", "lucky_number" : 2, "birthday" : { "month" : 5, "day" : 1, "year" : 2000 }, "interests" : [ [ "coding", "brunch", "MongoDB" ] ] }
+{ "_id" : ObjectId("61006a89da64def303954475"), "name" : "majd", "home_state" : "palestine", "lucky_number" : 40, "birthday" : { "month" : 2, "day" : 9, "year" : 1989 }, "interests" : [ "hello", [ "hi" ], "hola" ] }
+> db.students.remove({name:"majd"})
+WriteResult({ "nRemoved" : 1 })
+> db.students.remove({lucky_number:$gt:5})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:36
+> db.students.remove({lucky_number:{$gt:5}})
+WriteResult({ "nRemoved" : 1 })
+> db.students.remove({lucky_number:{$gt:5}},true)
+WriteResult({ "nRemoved" : 0 })
+> db.students.updateMany({},{$set:number_of_belts:0 })
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:47
+> db.students.updateMany({},{$set:number_of_belts:0 }})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:47
+> db.students.updateMany({{},{$set:number_of_belts:0 }})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:24
+> db.students.updateMany({},{$set:{number_of_belts:0} })
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find()
+{ "_id" : ObjectId("61006a4fda64def303954473"), "name" : "mohammad", "home_state" : "aljeria", "lucky_number" : 2, "birthday" : { "month" : 5, "day" : 1, "year" : 2000 }, "interests" : [ [ "coding", "brunch", "MongoDB" ] ], "number_of_belts" : 0 }
+> db.students.find().pretty
+function() {
+    this._prettyShell = true;
+    return this;
+}
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 0
+}
+> db.students.updateMany({},{$set:{number_of_belts:0}+1 })
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Modifiers operate on fields but we found type string instead. For example: {$mod: {<field>: ...}} not {$set: \"[object Object]1\"}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$set" : "[object Object]1"
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Modifiers operate on fields but we found type string instead. For example: {$mod: {<field>: ...}} not {$set: \"[object Object]1\"}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$set" : "[object Object]1"
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 0
+}
+> db.students.updateMany({},{$set:{number_of_belts:+1} })
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 1
+}
+> db.students.updateMany({},{$set:{number_of_belts:+10} })
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 10
+}
+> db.students.updateMany({},{$set:{number_of_belts+:10} })
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:48
+> db.students.updateMany({},{$set:{number_of_belts}+1 })
+uncaught exception: ReferenceError: number_of_belts is not defined :
+@(shell):1:34
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 10
+}
+> db.students.updateMany({},{$set:{"number_of_belts"}+1 })
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:50
+> db.students.updateMany({},{$set:{"number_of_belts"+1} })
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:50
+> db.students.updateMany({},{$set:{"number_of_belts"+:1} })
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:50
+> db.students.updateMany({},{$set:{number_of_belts+:1} })
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:48
+> db.students.updateMany({},{$set:{number_of_belts} })
+uncaught exception: ReferenceError: number_of_belts is not defined :
+@(shell):1:34
+> db.students.updateMany({},{$set:{number_of_belts:10} })
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 0 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 10
+}
+> db.students.updateMany({},{$set:{number_of_belts:10} }+1)
+uncaught exception: Error: the update operation document must contain atomic operators :
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:655:19
+@(shell):1:1
+> db.students.updateMany({},{$inc:{number_of_belts:10} })
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 20
+}
+> db.students.updateMany({},{$set{number_of_belts}:belts_earned})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:31
+> db.students.updateMany({},{$set{number_of_belts:belts_earned})
+... db.students.find().pretty()
+... db.students.find().pretty()
+... db.students.updateMany({},{$set{number_of_belts}:{belts_earned})
+...
+...
+>
+> db.students.updateMany({},{$set{number_of_belts}:belts_earned})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:31
+> db.students.updateMany({},{$set{number_of_belts}:"belts_earned"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:31
+> db.students.updateMany({},{$set"number_of_belts":"belts_earned"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:31
+> db.students.updateMany({},{$set{"number_of_belts":"belts_earned"})
+...
+...
+>
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 20
+}
+> db.students.updateMany({},{$reName{'number_of_belts':"belts_earned"})
+...
+...
+>
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 20
+}
+> db.students.updateMany({},{$reName:{'number_of_belts':'belts_earned'})
+...
+...
+>
+>
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 20
+}
+> db.students.updateMany({},{$reName:{'number_of_belts':'belts_earned'}})
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Unknown modifier: $reName. Expected a valid update modifier or pipeline-style update specified as an array",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$reName" : {
+                                "number_of_belts" : "belts_earned"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Unknown modifier: $reName. Expected a valid update modifier or pipeline-style update specified as an array",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$reName" : {
+                                "number_of_belts" : "belts_earned"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 20
+}
+> db.students.updateMany({},{$reName:{"number_of_belts":"belts_earned"}})
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Unknown modifier: $reName. Expected a valid update modifier or pipeline-style update specified as an array",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$reName" : {
+                                "number_of_belts" : "belts_earned"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Unknown modifier: $reName. Expected a valid update modifier or pipeline-style update specified as an array",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$reName" : {
+                                "number_of_belts" : "belts_earned"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "number_of_belts" : 20
+}
+> db.students.updateMany({},{$rename:{"number_of_belts":"belts_earned"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "lucky_number" : 2,
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20
+}
+> db.students.remove({"lucky_number"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:34
+> db.students.updateMany({},{$unset:{lucky_number:""}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20
+}
+> db.students.updateMany({},{$set:updated_on:{$currentDate}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:42
+> db.students.updateMany({},{$set:{updated_on:{$currentDate}}})
+uncaught exception: ReferenceError: $currentDate is not defined :
+@(shell):1:46
+> db.students.updateMany({},{$set:{updated_on:{$currentDate:}}})
+uncaught exception: SyntaxError: expected expression, got '}' :
+@(shell):1:58
+> db.students.updateMany({},{$set:updated_on:{$currentDate:}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:42
+> db.students.updateMany({},{$currentDate:updated_on:}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:50
+> db.students.updateMany({},{$currentDate:updated_on}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:51
+> db.students.updateMany({},{$currentDate:updated_on})
+uncaught exception: ReferenceError: updated_on is not defined :
+@(shell):1:28
+> db.students.updateMany({},{$currentDate:"updated_on"})
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Modifiers operate on fields but we found type string instead. For example: {$mod: {<field>: ...}} not {$currentDate: \"updated_on\"}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : "updated_on"
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 9,
+        "errmsg" : "Modifiers operate on fields but we found type string instead. For example: {$mod: {<field>: ...}} not {$currentDate: \"updated_on\"}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : "updated_on"
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20
+}
+> db.students.updateMany({},{$currentDate:{updated_on:""}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : ""
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : ""
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20
+}
+> db.students.updateMany({},{$currentDate:{updated_on:}})
+uncaught exception: SyntaxError: expected expression, got '}' :
+@(shell):1:52
+> db.students.updateMany({},{$currentDate:{updated_on:}})
+uncaught exception: SyntaxError: expected expression, got '}' :
+@(shell):1:52
+> db.students.updateMany({},{$currentDate:{updated_on}})
+uncaught exception: ReferenceError: updated_on is not defined :
+@(shell):1:42
+> db.students.updateMany({},{$push:{$currenDate:{updated_on}}})
+uncaught exception: ReferenceError: updated_on is not defined :
+@(shell):1:48
+> db.students.updateMany({},{$push:{$currenDate:{updated_on:""}}})
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currenDate' in '$currenDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currenDate" : {
+                                        "updated_on" : ""
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currenDate' in '$currenDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currenDate" : {
+                                        "updated_on" : ""
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$push:{$currenDate:{updated_on:}}})
+uncaught exception: SyntaxError: expected expression, got '}' :
+@(shell):1:58
+> db.students.updateMany({},{$push:{$currenDate:updated_on}})
+uncaught exception: ReferenceError: updated_on is not defined :
+@(shell):1:35
+> db.students.updateMany({},{$push:{$currenDate:"updated_on"}})
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currenDate' in '$currenDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currenDate" : "updated_on"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currenDate' in '$currenDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currenDate" : "updated_on"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$push:{$currenDate:"updated_on":date}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:58
+> db.students.updateMany({},{$push:{$currenDate:{"updated_on":date}}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:48
+> db.students.updateMany({},{$currenDate:{"updated_on":{"$type":date}}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:55
+> db.students.updateMany({},{$currenDate:{"updated_on":{$type:date}}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:55
+> db.students.updateMany({},{"$currenDate":{"updated_on":{"$type":date}}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:57
+> db.students.updateMany({},{$currenDate:{"updated_on"}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:52
+> db.students.updateMany({},{$push:{$currenDate:"updated_on")
+...
+...
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20
+}
+> db.students.updateMany({},{$push:updated_on:{$currentDate}]})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:43
+> db.students.updateMany({},{$push:updated_on:{$currentDate}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:43
+> db.students.updateMany({},{$push:{updated_on:{$currentDate}}})
+uncaught exception: ReferenceError: $currentDate is not defined :
+@(shell):1:47
+> db.students.updateMany({},{$push:{updated_on:$currentDate}})
+uncaught exception: ReferenceError: $currentDate is not defined :
+@(shell):1:35
+> db.students.updateMany({},{$push:{updated_on:"$currentDate"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20,
+        "updated_on" : [
+                "$currentDate"
+        ]
+}
+> db.students.updateMany({},{$push:{updated_on:{$currentDate}}})
+uncaught exception: ReferenceError: $currentDate is not defined :
+@(shell):1:47
+> db.students.updateMany({},{$push:{updated_on:{$currentdate}}})
+uncaught exception: ReferenceError: $currentdate is not defined :
+@(shell):1:47
+> db.students.updateMany({},{$push:{updated_on:{$currentdate:date}}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:47
+> db.students.updateMany({},{$push:{updated_on:{$currentDate:date}}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:47
+> db.students.updateMany({},{$push:{updated_on:{$currentDate:Date}}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20,
+        "updated_on" : [
+                "$currentDate",
+                {
+                        "$currentDate" : {
+                                "code" : "function Date() {\n    [native code]\n}"
+                        }
+                }
+        ]
+}
+> db.students.updateMany({},{$currentDate:Date}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:45
+> db.students.updateMany({},{$currentDate:{updated_on:Date}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{updated_on:date}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:42
+> db.students.updateMany({},{$currentDate:{"updated_on":Date}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:"updated_on":Date})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:52
+> db.students.updateMany({},{$currentDate:"updated_on":{Date}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:52
+> db.students.updateMany({},{$currentDate:updated_on:{Date}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:50
+> db.students.updateMany({},{$currentDate:{updated_on:{$type:{Date}}})
+...
+...
+>
+> db.students.updateMany({},{$currentDate:{updated_on:{$type:Date}}}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:66
+> db.students.updateMany({},{$currentDate:{updated_on:{$type:Date}}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "The '$type' string field is required to be 'date' or 'timestamp': {$currentDate: {field : {$type: 'date'}}}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "$type" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "The '$type' string field is required to be 'date' or 'timestamp': {$currentDate: {field : {$type: 'date'}}}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "$type" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{"updated_on":{$type:Date}}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "The '$type' string field is required to be 'date' or 'timestamp': {$currentDate: {field : {$type: 'date'}}}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "$type" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "The '$type' string field is required to be 'date' or 'timestamp': {$currentDate: {field : {$type: 'date'}}}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "$type" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{"updated_on":{$type:Date}}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "The '$type' string field is required to be 'date' or 'timestamp': {$currentDate: {field : {$type: 'date'}}}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "$type" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "The '$type' string field is required to be 'date' or 'timestamp': {$currentDate: {field : {$type: 'date'}}}",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "$type" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{"updated_on":{$type:date}}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:56
+> db.students.updateMany({},{$currentDate:{"updated_on":{Date}}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "Unrecognized $currentDate option: Date",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "Date" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "Unrecognized $currentDate option: Date",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : {
+                                        "Date" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{"updated_on":Date}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$set{$currentDate:{"updated_on":Date}}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:31
+> db.students.updateMany({},{$set:{$currentDate:{"updated_on":Date}}})
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currentDate' in '$currentDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$set" : {
+                                "$currentDate" : {
+                                        "updated_on" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currentDate' in '$currentDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$set" : {
+                                "$currentDate" : {
+                                        "updated_on" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$push:{$currentDate:{"updated_on":Date}}})
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currentDate' in '$currentDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currentDate" : {
+                                        "updated_on" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currentDate' in '$currentDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currentDate" : {
+                                        "updated_on" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$push:{$currentDate:{"updated_on":Date}}})
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currentDate' in '$currentDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currentDate" : {
+                                        "updated_on" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 52,
+        "errmsg" : "The dollar ($) prefixed field '$currentDate' in '$currentDate' is not allowed in the context of an update's replacement document. Consider using an aggregation pipeline with $replaceWith.",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$push" : {
+                                "$currentDate" : {
+                                        "updated_on" : function Date() {
+    [native code]
+}
+                                }
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.inset({},{$currentDate:{"updated_on":Date}})
+uncaught exception: TypeError: db.students.inset is not a function :
+@(shell):1:1
+> db.students.insert({},{$currentDate:{"updated_on":Date}})
+WriteResult({ "nInserted" : 1 })
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20,
+        "updated_on" : [
+                "$currentDate",
+                {
+                        "$currentDate" : {
+                                "code" : "function Date() {\n    [native code]\n}"
+                        }
+                }
+        ]
+}
+{ "_id" : ObjectId("61007b51da64def303954476") }
+> db.students.remove({"_id" : ObjectId("61007b51da64def303954476")})
+WriteResult({ "nRemoved" : 1 })
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20,
+        "updated_on" : [
+                "$currentDate",
+                {
+                        "$currentDate" : {
+                                "code" : "function Date() {\n    [native code]\n}"
+                        }
+                }
+        ]
+}
+> db.students.inset({},{$currentDate:{"updated_on":Date}})
+uncaught exception: TypeError: db.students.inset is not a function :
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{"updated_on":Date}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "javascript is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : function Date() {
+    [native code]
+}
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{"updated_on":Date()}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : "Wed Jul 28 2021 00:34:17 GMT+0300 (West Bank Gaza Daylight Time)"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : "Wed Jul 28 2021 00:34:17 GMT+0300 (West Bank Gaza Daylight Time)"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{"updated_on":date()}})
+uncaught exception: ReferenceError: date is not defined :
+@(shell):1:42
+> db.students.updateMany({},{$currentDate:{updated_on:Date()}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : "Wed Jul 28 2021 00:34:38 GMT+0300 (West Bank Gaza Daylight Time)"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : "Wed Jul 28 2021 00:34:38 GMT+0300 (West Bank Gaza Daylight Time)"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.updateMany({},{$currentDate:{updated_on:Date()}})
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : "Wed Jul 28 2021 00:35:07 GMT+0300 (West Bank Gaza Daylight Time)"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+}) :
+WriteError({
+        "index" : 0,
+        "code" : 2,
+        "errmsg" : "string is not valid type for $currentDate. Please use a boolean ('true') or a $type expression ({$type: 'timestamp/date'}).",
+        "op" : {
+                "q" : {
+
+                },
+                "u" : {
+                        "$currentDate" : {
+                                "updated_on" : "Wed Jul 28 2021 00:35:07 GMT+0300 (West Bank Gaza Daylight Time)"
+                        }
+                },
+                "multi" : true,
+                "upsert" : false
+        }
+})
+WriteError@src/mongo/shell/bulk_api.js:465:48
+mergeBatchResults@src/mongo/shell/bulk_api.js:871:49
+executeBatch@src/mongo/shell/bulk_api.js:940:13
+Bulk/this.execute@src/mongo/shell/bulk_api.js:1182:21
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:690:17
+@(shell):1:1
+> db.students.update({},{$currentDate:{"updated_on":{$type:"date"}}},false,true)
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find().pretty()
+{
+        "_id" : ObjectId("61006a4fda64def303954473"),
+        "name" : "mohammad",
+        "home_state" : "aljeria",
+        "birthday" : {
+                "month" : 5,
+                "day" : 1,
+                "year" : 2000
+        },
+        "interests" : [
+                [
+                        "coding",
+                        "brunch",
+                        "MongoDB"
+                ]
+        ],
+        "belts_earned" : 20,
+        "updated_on" : ISODate("2021-07-27T21:35:14.162Z")
+}
+> db.students.update({},{$currentDate:{"updated_on":{$type:"date"}}},false,true)
