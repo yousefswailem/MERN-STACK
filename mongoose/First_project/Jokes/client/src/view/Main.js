@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Products from '../component/Products';
-import List from '../component/List';
+import ProductManager from '../component/List';
+import ProductsList from '../component/Products';
 import axios from 'axios';
 
 const Main = () => {
@@ -10,17 +10,20 @@ const Main = () => {
     useEffect(()=>{
         axios.get('http://localhost:8000/api/products')
             .then(res=>{
-               // console.log(res.data.Products)
-                setProducts(res.data.Products);
+                setProducts(res.data);
                 setLoaded(true);
             });
-    },[])
+    })
+
+    const removeFromDom = productId => {
+        setProducts(products.filter(product => product._id !== productId));
+    }
 
     return (
         <div>
-           <Products />
+           <ProductManager/>
            <hr/>
-           {loaded && <List products={products}/>}
+           {loaded && <ProductsList products={products} removeFromDom={removeFromDom}/>}
         </div>
     )
 }
